@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" type="text/css" href="css/general.css">
+    <title>Мои друзья</title>
+</head>
+<body>
+    <div class="container">
+        <h1>Мои друзья</h1>
+        <table>
+            <tr>
+                <th>Имя</th>
+                <th>Возраст</th>
+            </tr>
+            <tr th:each="u: ${users}" >
+                <td th:text="${u.name}"></td>
+                <td th:text="${u.age}"></td>
+            </tr>
+        </table>
+        <a href="users/add">Присоединиться к нам</a>
+    </div>
+</body>
+</html>

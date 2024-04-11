@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" type="text/css" href="../css/general.css">
+    <title>Мои друзья</title>
+</head>
+<body>
+    <div class="container">
+        <h1>Присоединиться к нам. Нас <span th:text="${count}"></span></h1>
+        <form action="/users" method="post">
+            <p>Имя:</p>
+            <input type="text" name="name"><br />
+            <p>Возраст: </p>
+            <input type="number" name="age"><br />
+            <button type="submit">Добавить</button>
+        </form>
+    </div>
+</body>
+</html>
